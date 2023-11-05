@@ -13,6 +13,15 @@ namespace DependencyService
         public MainPage()
         {
             InitializeComponent();
+
+            Item1.Clicked += async (sender, e) =>
+            {
+                await Navigation.PushAsync(new BatteryDemo());
+            };
+            Item2.Clicked += async (sender, e) =>
+            {
+                await Navigation.PushAsync(new QRReaderPage());
+            };
         }
     }
 }
